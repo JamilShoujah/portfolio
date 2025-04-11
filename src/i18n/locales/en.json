@@ -1,0 +1,206 @@
+
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "services": "Services",
+    "contact": "Contact",
+    "language": "Language",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "email": "Email",
+    "openMenu": "Open Menu",
+    "closeMenu": "Close Menu"
+  },
+  "hero": {
+    "role": "Full-Stack Software Engineer",
+    "downloadResume": "Download Resume",
+    "scrollDown": "Scroll Down"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Get to know me better",
+    "description": "I am a passionate full-stack software engineer with a focus on creating elegant, efficient, and user-friendly solutions. With extensive experience across various tech stacks, I enjoy tackling complex problems and turning ideas into reality.",
+    "paragraph1": "I'm a versatile Full-Stack Software Engineer with experience in React Native, React.js, Next.js, Node.js, and more. My passion lies in building scalable web and mobile applications with intuitive user experiences.",
+    "paragraph2": "I pursued Computer Science because of my lifelong passion for gaming. Games have always been more than entertainment for me — they've been a source of inspiration, creativity, and ultimately led me to pursue a career in technology.",
+    "paragraph3": "Beyond coding, I've worked as a freelance talent manager at the Esports World Cup in Riyadh, where I oversaw high-profile esports talent, combining my technical knowledge with event management expertise.",
+    "devJourney": {
+      "title": "Development Journey",
+      "description": "Skilled in both frontend and backend technologies, I enjoy creating responsive interfaces and optimizing API performance. My educational foundation at American University of Beirut provided me with strong problem-solving skills."
+    },
+    "esports": {
+      "title": "Esports Passion",
+      "description": "My work in the esports industry allowed me to combine my technical knowledge with my passion for gaming. I'm inspired by Nadeshot, former Call of Duty pro and founder of 100 Thieves, as I work toward my goal of creating Lebanon's first global esports team."
+    },
+    "learning": {
+      "title": "Continuous Learning",
+      "description": "I'm constantly expanding my knowledge in backend & cloud solutions, staying current with emerging technologies and best practices in software development."
+    },
+    "goals": {
+      "title": "Career Goals",
+      "description": "I aim to grow as a full-stack developer with an emphasis on backend & cloud solutions, while pursuing my dream of establishing Lebanon's first international esports team to compete on the global stage."
+    }
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "subtitle": "My professional journey",
+    "viewProjects": "View My Projects",
+    "roles": {
+      "talentManager": "Freelance Talent Manager",
+      "mobileEngineer": "Mobile Software Engineer"
+    },
+    "companies": {
+      "esportWorldCup": "Esport World Cup",
+      "et3labs": "ET3Labs"
+    },
+    "locations": {
+      "riyadh": "Riyadh, Saudi Arabia",
+      "hazmieh": "Hazmieh, Lebanon"
+    },
+    "periods": {
+      "julyAug2024": "Jul 2024 - Aug 2024",
+      "novJun2024": "Nov 2023 - Jun 2024"
+    },
+    "descriptions": {
+      "ewc": {
+        "item1": "Collaborated with producers to align talent involvement with event programming and production requirements.",
+        "item2": "Facilitated communication across multiple departments to ensure seamless coordination and execution of event logistics.",
+        "item3": "Coordinated travel, accommodations, and on-site logistics for talents to ensure a smooth and stress-free experience.",
+        "item4": "Handled on-site crisis situations involving talents and implemented swift solutions to mitigate impact on the event.",
+        "item5": "Analyzed post-event feedback and performance data to identify areas of improvement and develop future strategies."
+      },
+      "et3labs": {
+        "item1": "Implemented responsive design principles to ensure applications function seamlessly across multiple devices and platforms.",
+        "item2": "Conducted rigorous testing and debugging to identify and resolve performance bottlenecks, enhancing overall application stability.",
+        "item3": "Developed and integrated RESTful APIs to streamline communication between front-end and back-end systems.",
+        "item4": "Optimized database queries and structures to improve application performance and data retrieval speed.",
+        "item5": "Researched and adopted emerging technologies to stay ahead of industry trends and enhance development processes.",
+        "item6": "Refactored legacy code to improve maintainability and scalability, and updated the README for faster developer onboarding.",
+        "item7": "Collaborated with cross-functional teams to ensure seamless application functionality and smoother workflows.",
+        "item8": "Followed Agile methodologies to enhance team efficiency and project delivery.",
+        "item9": "Enhanced UI/UX for improved navigation and higher user engagement, ensuring a better overall experience."
+      }
+    }
+  },
+  "projects": {
+    "title": "Notable Projects",
+    "subtitle": "Some of my recent work",
+    "viewDemo": "View Demo",
+    "viewCode": "View Code",
+    "filters": {
+      "all": "All Projects",
+      "web": "Web Apps",
+      "mobile": "Mobile Apps"
+    },
+    "types": {
+      "web": "Web App",
+      "mobile": "Mobile App"
+    },
+    "techStack": "Tech Stack",
+    "achievements": "Achievements",
+    "items": {
+      "1": {
+        "title": "Sweep",
+        "description": "A services app connecting users with local experts in pest control, cleaning, and similar services, promoting employment of local labor forces.",
+        "achievements": {
+          "0": "Delivered a fully functional app with smooth backend integration",
+          "1": "Optimized AWS services for cost-efficiency and performance"
+        }
+      },
+      "2": {
+        "title": "Student Hub",
+        "description": "A full-stack academic platform providing students with tools to chat, share exams, and review courses.",
+        "achievements": {
+          "0": "Provided students with a platform to chat, share exams, and review courses",
+          "1": "Improved database efficiency with optimized queries"
+        }
+      },
+      "3": {
+        "title": "Robin Hood",
+        "description": "A platform helping students review courses, evaluate instructors, and access past exams with secure authentication.",
+        "achievements": {
+          "0": "Helps students review courses, evaluate instructors, and access past exams",
+          "1": "Secure authentication and data storage"
+        }
+      },
+      "4": {
+        "title": "Pro-Academix",
+        "description": "A tutoring center webpage building a structured platform for tutors, students, and courses.",
+        "achievements": {
+          "0": "Building a structured platform for tutors, students, and courses",
+          "1": "Implementing dark mode & multilingual support with custom theme and language wrappers"
+        }
+      },
+      "5": {
+        "title": "Developer Portfolio",
+        "description": "A modern, responsive portfolio website showcasing my skills, experience, and projects with a sleek neon-themed design.",
+        "achievements": {
+          "0": "Created a fully responsive design with smooth animations and interactions",
+          "1": "Implemented a functional contact form with EmailJS integration"
+        }
+      }
+    }
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "subtitle": "Continuously improving and expanding my skillset",
+    "skillsLabel": "Skills",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database",
+      "languages": "Languages",
+      "state": "State Management",
+      "cloud": "Cloud & DevOps"
+    }
+  },
+  "services": {
+    "title": "My Services",
+    "subtitle": "How I can help you",
+    "tutoring": {
+      "title": "Computer Science Tutoring",
+      "description": "I offer personalized tutoring for computer science courses. Whether you're struggling with programming concepts, algorithms, data structures, or any CS-related subject, I'm here to help you succeed.",
+      "cta": "Inquire about tutoring"
+    },
+    "freelance": {
+      "title": "Freelance Development",
+      "description": "I'm available for freelance software development projects. From web applications to mobile solutions, I can help bring your ideas to life with clean, efficient, and well-tested code.",
+      "cta": "Discuss your project"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's connect",
+    "freelance": "I am available for freelance software development projects!",
+    "name": "Your Name",
+    "email": "Your Email",
+    "message": "Your Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Failed to send message. Please try again.",
+    "phone": "Phone",
+    "location": "Location",
+    "social": "Social Profiles",
+    "form": {
+      "title": "Send Me a Message"
+    },
+    "contactInfo": "Contact Information"
+  },
+  "footer": {
+    "copyright": "© 2024 Jamil Shoujah. All Rights Reserved.",
+    "madeWith": "Made with"
+  },
+  "language": {
+    "en": "English",
+    "ar": "Arabic",
+    "fr": "French"
+  },
+  "splash": {
+    "loading": "Loading...",
+    "welcome": "Welcome!"
+  }
+}
