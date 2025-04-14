@@ -70,7 +70,7 @@ const SkillsSection = () => {
         title: t('skills.categories.state'),
         icon: <Layers size={24} />,
         skills: ['MobX', 'Redux', 'Context API', 'State Machines'],
-        color: 'neon-cyan',
+        color: 'neon-orange',
       },
       {
         id: 'cloud',
