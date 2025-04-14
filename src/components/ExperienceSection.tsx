@@ -1,6 +1,4 @@
-
-import React from 'react';
-import { Briefcase, CalendarDays, MapPin } from 'lucide-react';
+import { CalendarDays, MapPin } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 interface ExperienceItem {
@@ -15,7 +13,7 @@ interface ExperienceItem {
 
 const ExperienceSection = () => {
   const { t } = useTranslation();
-  
+
   const experiences: ExperienceItem[] = [
     {
       id: 1,
@@ -28,9 +26,9 @@ const ExperienceSection = () => {
         t('experience.descriptions.ewc.item2'),
         t('experience.descriptions.ewc.item3'),
         t('experience.descriptions.ewc.item4'),
-        t('experience.descriptions.ewc.item5')
+        t('experience.descriptions.ewc.item5'),
       ],
-      highlightColor: "neon-purple"
+      highlightColor: 'neon-pink',
     },
     {
       id: 2,
@@ -47,10 +45,23 @@ const ExperienceSection = () => {
         t('experience.descriptions.et3labs.item6'),
         t('experience.descriptions.et3labs.item7'),
         t('experience.descriptions.et3labs.item8'),
-        t('experience.descriptions.et3labs.item9')
+        t('experience.descriptions.et3labs.item9'),
       ],
-      highlightColor: "neon-blue"
-    }
+      highlightColor: 'neon-pink',
+    },
+    {
+      id: 3,
+      role: t('experience.roles.iosDeveloperIntern'),
+      company: t('experience.companies.iquad'),
+      location: t('experience.locations.beirut'),
+      period: t('experience.periods.mayAug2023'),
+      description: [
+        t('experience.descriptions.iquad.item1'),
+        t('experience.descriptions.iquad.item2'),
+        t('experience.descriptions.iquad.item3'),
+      ],
+      highlightColor: 'neon-pink',
+    },
   ];
 
   return (
@@ -63,7 +74,9 @@ const ExperienceSection = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 inline-block glow-text">{t('experience.title')}</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 inline-block glow-text">
+            {t('experience.title')}
+          </h2>
           <div className="w-32 h-1 mx-auto bg-gradient-to-r from-neon-purple to-neon-blue rounded-full"></div>
         </div>
 
@@ -78,7 +91,7 @@ const ExperienceSection = () => {
                 <div className="flex flex-col md:flex-row">
                   {/* Timeline dot */}
                   <div className="hidden md:block absolute left-0 transform -translate-x-1/2 w-5 h-5 rounded-full bg-black border-2 border-neon-purple"></div>
-                  
+
                   {/* Content */}
                   <div className="w-full bg-black/40 border border-gray-800 rounded-lg p-6 md:p-8 glassmorphism hover:border-neon-purple/30 transition-all duration-300">
                     <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-6">
@@ -87,7 +100,7 @@ const ExperienceSection = () => {
                           {exp.role}
                           <span className={`ml-2 text-${exp.highlightColor}`}>@ {exp.company}</span>
                         </h3>
-                        
+
                         <div className="flex flex-col sm:flex-row sm:items-center text-gray-400 mb-4 space-y-2 sm:space-y-0 sm:space-x-6">
                           <div className="flex items-center">
                             <MapPin size={16} className="mr-1" />
@@ -100,11 +113,13 @@ const ExperienceSection = () => {
                         </div>
                       </div>
                     </div>
-                    
+
                     <ul className="space-y-3">
                       {exp.description.map((item, i) => (
                         <li key={i} className="flex items-start">
-                          <span className={`mr-2 text-${exp.highlightColor} flex-shrink-0 text-xl`}>•</span>
+                          <span className={`mr-2 text-${exp.highlightColor} flex-shrink-0 text-xl`}>
+                            •
+                          </span>
                           <span className="text-gray-300">{item}</span>
                         </li>
                       ))}
@@ -117,13 +132,22 @@ const ExperienceSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <a 
-            href="#projects" 
+          <a
+            href="#projects"
             className="inline-flex items-center text-lg text-white hover:text-neon-purple transition-colors"
           >
             <span>{t('experience.viewProjects')}</span>
-            <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L10 14.586l5.293-5.293a1 1 0 011.414 0z" clipRule="evenodd" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="ml-2 h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L10 14.586l5.293-5.293a1 1 0 011.414 0z"
+                clipRule="evenodd"
+              />
             </svg>
           </a>
         </div>

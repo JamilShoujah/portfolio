@@ -92,7 +92,7 @@ const ContactSection = () => {
                   <Mail className="text-neon-purple" size={18} />
                 </div>
                 <div>
-                  <h4 className="text-white font-medium">{t('contact.email')}</h4>
+                  <h4 className="text-white font-medium">{t('navbar.email')}</h4>
                   <a
                     href="mailto:jamilshoujah.dev@gmail.com"
                     className="text-gray-400 hover:text-neon-purple transition-colors"

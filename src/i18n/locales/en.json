@@ -1,4 +1,3 @@
-
 {
   "navbar": {
     "home": "Home",
@@ -50,19 +49,23 @@
     "viewProjects": "View My Projects",
     "roles": {
       "talentManager": "Freelance Talent Manager",
-      "mobileEngineer": "Mobile Software Engineer"
+      "mobileEngineer": "Mobile Software Engineer",
+      "iosIntern": "iOS Developer Intern"
     },
     "companies": {
       "esportWorldCup": "Esport World Cup",
-      "et3labs": "ET3Labs"
+      "et3labs": "ET3Labs",
+      "iquad": "iQuad Learning Solutions"
     },
     "locations": {
       "riyadh": "Riyadh, Saudi Arabia",
-      "hazmieh": "Hazmieh, Lebanon"
+      "hazmieh": "Hazmieh, Lebanon",
+      "beirut": "Beirut, Lebanon"
     },
     "periods": {
       "julyAug2024": "Jul 2024 - Aug 2024",
-      "novJun2024": "Nov 2023 - Jun 2024"
+      "novJun2024": "Nov 2023 - Jun 2024",
+      "mayAug2023": "May 2023 - Aug 2023"
     },
     "descriptions": {
       "ewc": {
@@ -82,6 +85,13 @@
         "item7": "Collaborated with cross-functional teams to ensure seamless application functionality and smoother workflows.",
         "item8": "Followed Agile methodologies to enhance team efficiency and project delivery.",
         "item9": "Enhanced UI/UX for improved navigation and higher user engagement, ensuring a better overall experience."
+      },
+      "iquad": {
+        "item1": "Revamped the frontend interface of the iOS application to modernize its look and feel using Swift and UIKit.",
+        "item2": "Modified API handling on the frontend to accommodate new backend structures and logic changes.",
+        "item3": "Participated in UI discussions to improve user flow and responsiveness across different screen sizes.",
+        "item4": "Tested new features and ensured they met performance and functionality requirements before release.",
+        "item5": "Worked closely with the design and backend teams to ensure cohesive integration and delivery."
       }
     }
   },

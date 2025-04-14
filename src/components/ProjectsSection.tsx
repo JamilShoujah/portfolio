@@ -120,7 +120,7 @@ const ProjectsSection = () => {
             <button
               className={`px-4 py-2 rounded-md text-sm transition-all ${
                 activeFilter === 'all'
-                  ? 'bg-gradient-to-r from-neon-purple to-neon-pink text-white'
+                  ? 'bg-gradient-to-r from-neon-pink to-neon-purple text-white'
                   : 'text-gray-400 hover:text-white'
               }`}
               onClick={() => setActiveFilter('all')}
@@ -130,7 +130,7 @@ const ProjectsSection = () => {
             <button
               className={`px-4 py-2 rounded-md text-sm transition-all ${
                 activeFilter === 'web'
-                  ? 'bg-gradient-to-r from-neon-blue to-neon-cyan text-white'
+                  ? 'bg-gradient-to-r from-neon-purple to-neon-blue text-white'
                   : 'text-gray-400 hover:text-white'
               }`}
               onClick={() => setActiveFilter('web')}
@@ -140,7 +140,7 @@ const ProjectsSection = () => {
             <button
               className={`px-4 py-2 rounded-md text-sm transition-all ${
                 activeFilter === 'mobile'
-                  ? 'bg-gradient-to-r from-neon-purple to-neon-blue text-white'
+                  ? 'bg-gradient-to-r from-neon-blue to-neon-pink text-white'
                   : 'text-gray-400 hover:text-white'
               }`}
               onClick={() => setActiveFilter('mobile')}
