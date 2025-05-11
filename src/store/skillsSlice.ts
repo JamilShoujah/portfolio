@@ -1,24 +1,8 @@
-
+import { SkillsState, SkillCategory } from '@/models/interfaces';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Monitor, Server, Database, Code, Layers, Cloud } from 'lucide-react';
-import type { ReactNode } from 'react';
 
-export interface SkillCategory {
-  id: string;
-  title: string;
-  icon: ReactNode;
-  skills: string[];
-  color: string;
-}
-
-interface SkillsState {
-  activeCategory: string;
-  categories: SkillCategory[];
-}
-
-// Initial state will be populated in the component
 const initialState: SkillsState = {
-  activeCategory: "frontend",
+  activeCategory: 'frontend',
   categories: [],
 };
 

@@ -1,106 +1,21 @@
 import React, { useState } from 'react';
 import { ExternalLink, Github, Server, Smartphone } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-
-interface Project {
-  id: number;
-  title: string;
-  description: string;
-  techStack: string[];
-  achievements: string[];
-  gradientFrom: string;
-  gradientTo: string;
-  type: 'mobile' | 'web';
-}
+import { projects } from '@/constants/Projects';
 
 const ProjectsSection = () => {
   const [activeFilter, setActiveFilter] = useState<'all' | 'mobile' | 'web'>('all');
   const { t } = useTranslation();
 
-  const projects: Project[] = [
-    {
-      id: 1,
-      title: 'Sweep',
-      description:
-        'A services app connecting users with local experts in pest control, cleaning, and similar services, promoting employment of local labor forces.',
-      techStack: ['Kotlin', 'Jetpack Compose', 'Flask', 'AWS Lambda', 'S3'],
-      achievements: [
-        'Delivered a fully functional app with smooth backend integration',
-        'Optimized AWS services for cost-efficiency and performance',
-      ],
-      gradientFrom: 'neon-purple',
-      gradientTo: 'neon-blue',
-      type: 'mobile',
-    },
-    {
-      id: 2,
-      title: 'Student Hub',
-      description:
-        'A full-stack academic platform providing students with tools to chat, share exams, and review courses.',
-      techStack: ['React.js', 'ASP.NET', 'MySQL', 'MVC'],
-      achievements: [
-        'Provided students with a platform to chat, share exams, and review courses',
-        'Improved database efficiency with optimized queries',
-      ],
-      gradientFrom: 'neon-blue',
-      gradientTo: 'neon-cyan',
-      type: 'web',
-    },
-    {
-      id: 3,
-      title: 'Robin Hood',
-      description:
-        'A platform helping students review courses, evaluate instructors, and access past exams with secure authentication.',
-      techStack: ['React.js', 'ASP.NET'],
-      achievements: [
-        'Helps students review courses, evaluate instructors, and access past exams',
-        'Secure authentication and data storage',
-      ],
-      gradientFrom: 'neon-pink',
-      gradientTo: 'neon-orange',
-      type: 'web',
-    },
-    {
-      id: 4,
-      title: 'Pro-Academix',
-      description:
-        'A tutoring center webpage building a structured platform for tutors, students, and courses.',
-      techStack: ['Next.js', 'React'],
-      achievements: [
-        'Building a structured platform for tutors, students, and courses',
-        'Implementing dark mode & multilingual support with custom theme and language wrappers',
-      ],
-      gradientFrom: 'neon-orange',
-      gradientTo: 'neon-purple',
-      type: 'web',
-    },
-    {
-      id: 5,
-      title: 'Developer Portfolio',
-      description:
-        'A modern, responsive portfolio website showcasing my skills, experience, and projects with a sleek neon-themed design.',
-      techStack: ['React.js', 'Tailwind CSS', 'TypeScript', 'EmailJS'],
-      achievements: [
-        'Created a fully responsive design with smooth animations and interactions',
-        'Implemented a functional contact form with EmailJS integration',
-      ],
-      gradientFrom: 'neon-cyan',
-      gradientTo: 'neon-pink',
-      type: 'web',
-    },
-  ];
-
   const filteredProjects =
     activeFilter === 'all' ? projects : projects.filter((project) => project.type === activeFilter);
 
-  // Helper function to safely get gradient class
   const getGradientClass = (from: string, to: string) => {
     return `bg-gradient-to-r from-${from} to-${to}`;
   };
 
   return (
     <section id="projects" className="py-20 bg-black relative overflow-hidden">
-      {/* Background gradients */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-1/2 w-96 h-96 bg-neon-pink/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-neon-purple/5 rounded-full blur-3xl"></div>
@@ -114,7 +29,6 @@ const ProjectsSection = () => {
           <div className="w-28 h-1 mx-auto bg-gradient-to-r from-neon-pink to-neon-purple rounded-full"></div>
         </div>
 
-        {/* Filter tabs */}
         <div className="flex justify-center mb-10">
           <div className="inline-flex p-1 bg-black/50 border border-gray-800 rounded-lg glassmorphism">
             <button

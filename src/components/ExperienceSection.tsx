@@ -1,72 +1,12 @@
+import { getExperienceData } from '@/constants/Experience';
 import { CalendarDays, MapPin } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-
-interface ExperienceItem {
-  id: number;
-  role: string;
-  company: string;
-  location: string;
-  period: string;
-  description: string[];
-  highlightColor: string;
-}
 
 const ExperienceSection = () => {
   const { t } = useTranslation();
 
-  const experiences: ExperienceItem[] = [
-    {
-      id: 1,
-      role: t('experience.roles.talentManager'),
-      company: t('experience.companies.esportWorldCup'),
-      location: t('experience.locations.riyadh'),
-      period: t('experience.periods.julyAug2024'),
-      description: [
-        t('experience.descriptions.ewc.item1'),
-        t('experience.descriptions.ewc.item2'),
-        t('experience.descriptions.ewc.item3'),
-        t('experience.descriptions.ewc.item4'),
-        t('experience.descriptions.ewc.item5'),
-      ],
-      highlightColor: 'neon-pink',
-    },
-    {
-      id: 2,
-      role: t('experience.roles.mobileEngineer'),
-      company: t('experience.companies.et3labs'),
-      location: t('experience.locations.hazmieh'),
-      period: t('experience.periods.novJun2024'),
-      description: [
-        t('experience.descriptions.et3labs.item1'),
-        t('experience.descriptions.et3labs.item2'),
-        t('experience.descriptions.et3labs.item3'),
-        t('experience.descriptions.et3labs.item4'),
-        t('experience.descriptions.et3labs.item5'),
-        t('experience.descriptions.et3labs.item6'),
-        t('experience.descriptions.et3labs.item7'),
-        t('experience.descriptions.et3labs.item8'),
-        t('experience.descriptions.et3labs.item9'),
-      ],
-      highlightColor: 'neon-pink',
-    },
-    {
-      id: 3,
-      role: t('experience.roles.iosDeveloperIntern'),
-      company: t('experience.companies.iquad'),
-      location: t('experience.locations.beirut'),
-      period: t('experience.periods.mayAug2023'),
-      description: [
-        t('experience.descriptions.iquad.item1'),
-        t('experience.descriptions.iquad.item2'),
-        t('experience.descriptions.iquad.item3'),
-      ],
-      highlightColor: 'neon-pink',
-    },
-  ];
-
   return (
     <section id="experience" className="py-20 bg-black/80 relative overflow-hidden">
-      {/* Background elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute bottom-0 right-0 w-64 h-64 bg-neon-blue/10 rounded-full blur-3xl opacity-40"></div>
         <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-neon-purple/10 rounded-full blur-3xl opacity-30"></div>
@@ -82,17 +22,13 @@ const ExperienceSection = () => {
 
         <div className="max-w-4xl mx-auto">
           <div className="relative pl-0 md:pl-10">
-            {/* Timeline line */}
             <div className="hidden md:block absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-neon-purple via-neon-pink to-neon-blue"></div>
 
-            {/* Experience Items */}
-            {experiences.map((exp, index) => (
+            {getExperienceData(t).map((exp, index) => (
               <div key={exp.id} className="mb-16 last:mb-0">
                 <div className="flex flex-col md:flex-row">
-                  {/* Timeline dot */}
                   <div className="hidden md:block absolute left-0 transform -translate-x-1/2 w-5 h-5 rounded-full bg-black border-2 border-neon-purple"></div>
 
-                  {/* Content */}
                   <div className="w-full bg-black/40 border border-gray-800 rounded-lg p-6 md:p-8 glassmorphism hover:border-neon-purple/30 transition-all duration-300">
                     <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-6">
                       <div>
