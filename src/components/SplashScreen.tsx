@@ -2,10 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { useTranslation } from 'react-i18next';
+import { SplashScreenProps } from '@/models/interfaces';
 
-interface SplashScreenProps {
-  onFinished: () => void;
-}
 
 const SplashScreen: React.FC<SplashScreenProps> = ({ onFinished }) => {
   const [progress, setProgress] = useState(0);

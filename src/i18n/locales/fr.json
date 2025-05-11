@@ -1,4 +1,3 @@
-
 {
   "navbar": {
     "home": "Accueil",
@@ -11,87 +10,98 @@
     "language": "Langue",
     "github": "GitHub",
     "linkedin": "LinkedIn",
-    "email": "E-mail",
-    "openMenu": "Ouvrir Menu",
-    "closeMenu": "Fermer Menu"
+    "email": "Email",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu"
   },
   "hero": {
-    "role": "Ingénieur Logiciel Full-Stack",
-    "downloadResume": "Télécharger CV",
-    "scrollDown": "Défiler vers le bas"
+    "role": "Développeur Full-Stack",
+    "downloadResume": "Télécharger le CV",
+    "scrollDown": "Faire défiler vers le bas"
   },
   "about": {
-    "title": "À propos de Moi",
-    "subtitle": "Apprenez à me connaître",
-    "description": "Je suis un ingénieur logiciel full-stack passionné par la création de solutions élégantes, efficaces et conviviales. Avec une vaste expérience dans divers domaines technologiques, j'aime relever des défis complexes et transformer des idées en réalité.",
-    "paragraph1": "Je suis un ingénieur logiciel full-stack polyvalent avec de l'expérience en React Native, React.js, Next.js, Node.js et plus. Ma passion est de construire des applications web et mobiles évolutives avec des expériences utilisateur intuitives.",
-    "paragraph2": "J'ai poursuivi l'informatique en raison de ma passion de longue date pour les jeux vidéo. Les jeux ont toujours été plus qu'un divertissement pour moi — ils ont été une source d'inspiration et de créativité, et m'ont finalement conduit à poursuivre une carrière dans la technologie.",
-    "paragraph3": "Au-delà du codage, j'ai travaillé en tant que manager de talents freelance à la Coupe du Monde d'Esports à Riyad, où j'ai supervisé des talents d'esports de haut niveau, combinant mes connaissances techniques avec une expertise en gestion d'événements.",
+    "title": "À propos de moi",
+    "subtitle": "Apprenez à mieux me connaître",
+    "description": "Je suis un développeur full-stack passionné, spécialisé dans la création de solutions élégantes, efficaces et conviviales. Fort d'une expérience dans divers ensembles de technologies, j'aime résoudre des problèmes complexes et transformer des idées en réalité.",
+    "paragraph1": "Je suis un développeur Full-Stack polyvalent avec de l'expérience en React Native, React.js, Next.js, Node.js et bien plus encore. Ma passion réside dans la création d'applications web et mobiles évolutives avec des expériences utilisateur intuitives.",
+    "paragraph2": "J'ai poursuivi des études en informatique en raison de ma passion de toujours pour les jeux vidéo. Les jeux ont toujours été plus qu'un divertissement pour moi, ils ont été une source d'inspiration, de créativité et m'ont finalement conduit à une carrière en technologie.",
+    "paragraph3": "Au-delà de la programmation, j'ai travaillé en tant que gestionnaire de talents indépendant à l'Esports World Cup à Riyad, où j'ai supervisé des talents de haut niveau dans l'esport, alliant mes connaissances techniques à mon expertise en gestion d'événements.",
     "devJourney": {
       "title": "Parcours de Développement",
-      "description": "Compétent dans les technologies frontend et backend, j'aime créer des interfaces réactives et optimiser les performances des API. Ma formation à l'Université américaine de Beyrouth m'a doté de solides compétences en résolution de problèmes."
+      "description": "Compétent dans les technologies frontend et backend, j'aime créer des interfaces réactives et optimiser les performances des API. Ma formation à l'Université Américaine de Beyrouth m'a permis de développer des compétences solides en résolution de problèmes."
     },
     "esports": {
       "title": "Passion pour l'Esport",
-      "description": "Mon travail dans l'industrie de l'esport m'a permis de combiner mes connaissances techniques avec ma passion pour le gaming. Je suis inspiré par Nadeshot, ancien pro de Call of Duty et fondateur de 100 Thieves, alors que je travaille vers mon objectif de créer la première équipe esport mondiale du Liban."
+      "description": "Mon travail dans l'industrie de l'esport m'a permis de combiner mes connaissances techniques avec ma passion pour les jeux vidéo. Je m'inspire de Nadeshot, ancien joueur professionnel de Call of Duty et fondateur de 100 Thieves, alors que je travaille à la création de la première équipe d'esport mondiale du Liban."
     },
     "learning": {
       "title": "Apprentissage Continu",
-      "description": "J'élargis constamment mes connaissances en solutions backend et cloud, restant à jour avec les technologies émergentes et les meilleures pratiques en développement logiciel."
+      "description": "Je m'efforce d'élargir constamment mes connaissances en solutions backend et cloud, en restant à jour avec les technologies émergentes et les meilleures pratiques en développement logiciel."
     },
     "goals": {
       "title": "Objectifs de Carrière",
-      "description": "Je vise à grandir en tant que développeur full-stack avec un accent sur les solutions backend et cloud, tout en poursuivant mon rêve d'établir la première équipe internationale d'esport du Liban pour concourir sur la scène mondiale."
+      "description": "Je vise à évoluer en tant que développeur full-stack avec un accent particulier sur les solutions backend et cloud, tout en poursuivant mon rêve de créer la première équipe d'esport internationale du Liban pour concourir sur la scène mondiale."
     }
   },
   "experience": {
     "title": "Expérience Professionnelle",
     "subtitle": "Mon parcours professionnel",
-    "viewProjects": "Voir Mes Projets",
+    "viewProjects": "Voir mes projets",
     "roles": {
-      "talentManager": "Manager de Talents Freelance",
-      "mobileEngineer": "Ingénieur Logiciel Mobile"
+      "talentManager": "Gestionnaire de talents indépendant",
+      "mobileEngineer": "Ingénieur logiciel mobile",
+      "iosIntern": "Stagiaire Développeur iOS"
     },
     "companies": {
-      "esportWorldCup": "Coupe du Monde d'Esport",
-      "et3labs": "ET3Labs"
+      "esportWorldCup": "Esports World Cup",
+      "et3labs": "ET3Labs",
+      "iquad": "iQuad Learning Solutions"
     },
     "locations": {
       "riyadh": "Riyad, Arabie Saoudite",
-      "hazmieh": "Hazmieh, Liban"
+      "hazmieh": "Hazmieh, Liban",
+      "beirut": "Beyrouth, Liban"
     },
     "periods": {
       "julyAug2024": "Juil 2024 - Août 2024",
-      "novJun2024": "Nov 2023 - Juin 2024"
+      "novJun2024": "Nov 2023 - Juin 2024",
+      "mayAug2023": "Mai 2023 - Août 2023"
     },
     "descriptions": {
       "ewc": {
-        "item1": "Collaboration avec les producteurs pour aligner la participation des talents avec les exigences de programmation et de production de l'événement.",
-        "item2": "Facilitation de la communication entre plusieurs départements pour assurer une coordination et une exécution parfaites de la logistique de l'événement.",
-        "item3": "Coordination des voyages, hébergements et logistique sur site pour les talents afin d'assurer une expérience fluide et sans stress.",
-        "item4": "Gestion des situations de crise sur place impliquant des talents et mise en œuvre de solutions rapides pour minimiser l'impact sur l'événement.",
-        "item5": "Analyse des retours et des données de performance post-événement pour identifier les domaines d'amélioration et développer des stratégies futures."
+        "item1": "Collaboré avec les producteurs pour aligner l'implication des talents avec les exigences de programmation et de production de l'événement.",
+        "item2": "Facilité la communication entre plusieurs départements pour garantir une coordination et une exécution fluides de la logistique de l'événement.",
+        "item3": "Coordonné les voyages, les hébergements et la logistique sur place des talents pour assurer une expérience sans stress.",
+        "item4": "Géré les situations de crise sur place impliquant les talents et mis en œuvre des solutions rapides pour atténuer l'impact sur l'événement.",
+        "item5": "Analysé les retours après l'événement et les données de performance pour identifier les domaines à améliorer et développer des stratégies futures."
       },
       "et3labs": {
-        "item1": "Mise en œuvre de principes de design responsive pour garantir que les applications fonctionnent parfaitement sur plusieurs appareils et plateformes.",
-        "item2": "Conduite de tests rigoureux et débogage pour identifier et résoudre les goulots d'étranglement de performance, améliorant la stabilité globale de l'application.",
-        "item3": "Développement et intégration d'APIs RESTful pour rationaliser la communication entre les systèmes front-end et back-end.",
-        "item4": "Optimisation des requêtes et structures de base de données pour améliorer les performances de l'application et la vitesse de récupération des données.",
-        "item5": "Recherche et adoption de technologies émergentes pour rester à la pointe des tendances de l'industrie et améliorer les processus de développement.",
-        "item6": "Refactorisation du code existant pour améliorer la maintenabilité et l'évolutivité, et mise à jour du README pour une intégration plus rapide des développeurs.",
-        "item7": "Collaboration avec des équipes interfonctionnelles pour assurer une fonctionnalité d'application transparente et des flux de travail plus fluides.",
-        "item8": "Suivi des méthodologies Agile pour améliorer l'efficacité de l'équipe et la livraison du projet.",
-        "item9": "Amélioration de l'UI/UX pour une navigation améliorée et un engagement utilisateur plus élevé, garantissant une meilleure expérience globale."
+        "item1": "Mis en œuvre des principes de conception réactive pour garantir le bon fonctionnement des applications sur plusieurs appareils et plateformes.",
+        "item2": "Effectué des tests rigoureux et des débogages pour identifier et résoudre les goulots d'étranglement des performances, améliorant ainsi la stabilité générale de l'application.",
+        "item3": "Développé et intégré des API RESTful pour rationaliser la communication entre les systèmes front-end et back-end.",
+        "item4": "Optimisé les requêtes et les structures de la base de données pour améliorer les performances de l'application et la vitesse de récupération des données.",
+        "item5": "Recherché et adopté des technologies émergentes pour rester à la pointe des tendances de l'industrie et améliorer les processus de développement.",
+        "item6": "Réorganisé le code héritage pour améliorer la maintenabilité et l'évolutivité, et mis à jour le fichier README pour un meilleur onboarding des développeurs.",
+        "item7": "Collaboré avec des équipes interfonctionnelles pour garantir une fonctionnalité fluide des applications et des workflows plus efficaces.",
+        "item8": "Suivi les méthodologies Agile pour améliorer l'efficacité de l'équipe et la livraison des projets.",
+        "item9": "Amélioré l'UI/UX pour une meilleure navigation et un engagement utilisateur plus élevé, assurant une expérience générale améliorée."
+      },
+      "iquad": {
+        "item1": "Revitalisé l'interface frontend de l'application iOS pour moderniser son apparence à l'aide de Swift et UIKit.",
+        "item2": "Modifié la gestion des API sur le frontend pour s'adapter aux nouvelles structures et modifications logiques du backend.",
+        "item3": "Participé aux discussions sur l'UI pour améliorer le flux utilisateur et la réactivité sur différentes tailles d'écran.",
+        "item4": "Testé de nouvelles fonctionnalités et assuré qu'elles respectaient les exigences de performance et de fonctionnalité avant leur publication.",
+        "item5": "Travaillé en étroite collaboration avec les équipes de conception et de backend pour garantir une intégration cohérente et une livraison réussie."
       }
     }
   },
   "projects": {
     "title": "Projets Notables",
-    "subtitle": "Quelques-uns de mes travaux récents",
-    "viewDemo": "Voir la Démo",
-    "viewCode": "Voir le Code",
+    "subtitle": "Quelques-uns de mes projets récents",
+    "viewDemo": "Voir la démo",
+    "viewCode": "Voir le code",
     "filters": {
-      "all": "Tous les Projets",
+      "all": "Tous les projets",
       "web": "Applications Web",
       "mobile": "Applications Mobiles"
     },
@@ -99,44 +109,44 @@
       "web": "Application Web",
       "mobile": "Application Mobile"
     },
-    "techStack": "Technologies Utilisées",
+    "techStack": "Technologies",
     "achievements": "Réalisations",
     "items": {
       "1": {
         "title": "Sweep",
-        "description": "Une application de services connectant les utilisateurs avec des experts locaux dans le contrôle des nuisibles, le nettoyage et des services similaires, favorisant l'emploi des forces de travail locales.",
+        "description": "Une application de services mettant en relation les utilisateurs avec des experts locaux en contrôle des nuisibles, nettoyage, et services similaires, favorisant l'emploi des forces de travail locales.",
         "achievements": {
-          "0": "Livré une application entièrement fonctionnelle avec une intégration backend fluide",
-          "1": "Optimisé les services AWS pour une efficacité des coûts et des performances"
+          "0": "Livré une application entièrement fonctionnelle avec une intégration fluide au backend",
+          "1": "Optimisé les services AWS pour améliorer l'efficacité des coûts et des performances"
         }
       },
       "2": {
         "title": "Student Hub",
-        "description": "Une plateforme académique complète fournissant aux étudiants des outils pour discuter, partager des examens et évaluer des cours.",
+        "description": "Une plateforme académique full-stack offrant aux étudiants des outils pour discuter, partager des examens et évaluer des cours.",
         "achievements": {
-          "0": "Fourni aux étudiants une plateforme pour discuter, partager des examens et évaluer des cours",
-          "1": "Amélioré l'efficacité de la base de données avec des requêtes optimisées"
+          "0": "Fournit aux étudiants une plateforme pour discuter, partager des examens et évaluer des cours",
+          "1": "Amélioration de l'efficacité de la base de données grâce à des requêtes optimisées"
         }
       },
       "3": {
         "title": "Robin Hood",
-        "description": "Une plateforme aidant les étudiants à évaluer les cours, évaluer les instructeurs et accéder aux examens passés avec une authentification sécurisée.",
+        "description": "Une plateforme aidant les étudiants à évaluer des cours, examiner des enseignants et accéder à des examens passés avec une authentification sécurisée.",
         "achievements": {
-          "0": "Aide les étudiants à évaluer les cours, évaluer les instructeurs et accéder aux examens passés",
-          "1": "Authentification et stockage de données sécurisés"
+          "0": "Aide les étudiants à évaluer des cours, examiner des enseignants et accéder à des examens passés",
+          "1": "Authentification sécurisée et stockage des données"
         }
       },
       "4": {
         "title": "Pro-Academix",
-        "description": "Une page web de centre de tutorat construisant une plateforme structurée pour les tuteurs, les étudiants et les cours.",
+        "description": "Une page web pour un centre de tutorat construisant une plateforme structurée pour les tuteurs, étudiants et cours.",
         "achievements": {
-          "0": "Construction d'une plateforme structurée pour les tuteurs, les étudiants et les cours",
-          "1": "Implémentation du mode sombre et support multilingue avec des thèmes personnalisés et des wrappers linguistiques"
+          "0": "Création d'une plateforme structurée pour les tuteurs, étudiants et cours",
+          "1": "Implémentation du mode sombre et du support multilingue avec des wrappers personnalisés pour le thème et la langue"
         }
       },
       "5": {
-        "title": "Portfolio de Développeur",
-        "description": "Un site web de portfolio moderne et réactif présentant mes compétences, mon expérience et mes projets avec un design élégant à thème néon.",
+        "title": "Developer Portfolio",
+        "description": "Un portfolio moderne et réactif présentant mes compétences, mon expérience et mes projets avec un design néon élégant.",
         "achievements": {
           "0": "Création d'un design entièrement réactif avec des animations et interactions fluides",
           "1": "Implémentation d'un formulaire de contact fonctionnel avec intégration EmailJS"
@@ -146,24 +156,24 @@
   },
   "skills": {
     "title": "Compétences Techniques",
-    "subtitle": "J'améliore et étends continuellement mes compétences",
+    "subtitle": "Amélioration continue et expansion de mes compétences",
     "skillsLabel": "Compétences",
     "categories": {
       "frontend": "Frontend",
       "backend": "Backend",
       "database": "Base de données",
       "languages": "Langages",
-      "state": "Gestion d'État",
+      "state": "Gestion d'état",
       "cloud": "Cloud & DevOps"
     }
   },
   "services": {
     "title": "Mes Services",
-    "subtitle": "Comment puis-je vous aider",
+    "subtitle": "Comment je peux vous aider",
     "tutoring": {
-      "title": "Tutorat en Informatique",
-      "description": "J'offre du tutorat personnalisé pour les cours d'informatique. Que vous ayez des difficultés avec les concepts de programmation, les algorithmes, les structures de données ou tout autre sujet lié à l'informatique, je suis là pour vous aider à réussir.",
-      "cta": "Se renseigner sur le tutorat"
+      "title": "Cours de Science Informatique",
+      "description": "Je propose des cours particuliers en informatique. Que vous ayez des difficultés avec des concepts de programmation, des algorithmes, des structures de données ou tout autre sujet lié à l'informatique, je suis là pour vous aider à réussir.",
+      "cta": "Demander des cours"
     },
     "freelance": {
       "title": "Développement Freelance",
@@ -172,27 +182,23 @@
     }
   },
   "contact": {
-    "title": "Me Contacter",
-    "subtitle": "Restons en contact",
-    "freelance": "Je suis disponible pour des projets de développement logiciel freelance!",
+    "title": "Prenons Contact",
+    "subtitle": "Connectons-nous",
+    "freelance": "Je suis disponible pour des projets de développement logiciel freelance !",
     "name": "Votre Nom",
     "email": "Votre Email",
     "message": "Votre Message",
-    "send": "Envoyer le Message",
-    "sending": "Envoi en cours...",
-    "success": "Message envoyé avec succès!",
+    "send": "Envoyer le message",
+    "sending": "Envoi...",
+    "success": "Message envoyé avec succès !",
     "error": "Échec de l'envoi du message. Veuillez réessayer.",
     "phone": "Téléphone",
     "location": "Emplacement",
     "social": "Profils Sociaux",
     "form": {
-      "title": "Envoyez-moi un Message"
+      "title": "Envoyez-moi un message"
     },
     "contactInfo": "Informations de Contact"
-  },
-  "footer": {
-    "copyright": "© 2024 Jamil Shoujah. Tous droits réservés.",
-    "madeWith": "Créé avec"
   },
   "language": {
     "en": "Anglais",
@@ -201,6 +207,6 @@
   },
   "splash": {
     "loading": "Chargement...",
-    "welcome": "Bienvenue!"
+    "welcome": "Bienvenue !"
   }
 }
