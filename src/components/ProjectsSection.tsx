@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { ExternalLink, Github, Server, Smartphone } from 'lucide-react';
+import { useState } from 'react';
+import { Server, Smartphone } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { projects } from '@/constants/Projects';
 

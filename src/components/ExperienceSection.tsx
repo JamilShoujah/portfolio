@@ -34,7 +34,9 @@ const ExperienceSection = () => {
                       <div>
                         <h3 className={`text-2xl font-bold text-white mb-2`}>
                           {exp.role}
-                          <span className={`ml-2 text-${exp.highlightColor}`}>@ {exp.company}</span>
+                          <span className="ml-2 bg-gradient-to-r from-neon-purple to-neon-pink text-transparent bg-clip-text">
+                            @ {exp.company}
+                          </span>
                         </h3>
 
                         <div className="flex flex-col sm:flex-row sm:items-center text-gray-400 mb-4 space-y-2 sm:space-y-0 sm:space-x-6">
@@ -53,9 +55,7 @@ const ExperienceSection = () => {
                     <ul className="space-y-3">
                       {exp.description.map((item, i) => (
                         <li key={i} className="flex items-start">
-                          <span className={`mr-2 text-${exp.highlightColor} flex-shrink-0 text-xl`}>
-                            •
-                          </span>
+                          <span className={`mr-2 text-neon-purple flex-shrink-0 text-xl`}>•</span>
                           <span className="text-gray-300">{item}</span>
                         </li>
                       ))}

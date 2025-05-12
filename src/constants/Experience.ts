@@ -14,7 +14,6 @@ export const getExperienceData = (t: (key: string) => string): ExperienceItem[] 
       t('experience.descriptions.ewc.item4'),
       t('experience.descriptions.ewc.item5'),
     ],
-    highlightColor: 'neon-pink',
   },
   {
     id: 2,
@@ -33,7 +32,6 @@ export const getExperienceData = (t: (key: string) => string): ExperienceItem[] 
       t('experience.descriptions.et3labs.item8'),
       t('experience.descriptions.et3labs.item9'),
     ],
-    highlightColor: 'neon-pink',
   },
   {
     id: 3,
@@ -46,6 +44,5 @@ export const getExperienceData = (t: (key: string) => string): ExperienceItem[] 
       t('experience.descriptions.iquad.item2'),
       t('experience.descriptions.iquad.item3'),
     ],
-    highlightColor: 'neon-pink',
   },
 ];
