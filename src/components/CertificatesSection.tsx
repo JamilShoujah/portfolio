@@ -8,8 +8,23 @@ import { Badge } from './ui/badge';
 const CertificateSection = () => {
   const { t } = useTranslation();
 
-  // Array of neon colors for alternating certificates
   const neonColors = ['purple', 'blue', 'pink', 'cyan', 'orange'];
+
+  const neonCardHoverClasses: Record<string, string> = {
+    purple: 'hover:border-neon-purple/30',
+    blue: 'hover:border-neon-blue/30',
+    pink: 'hover:border-neon-pink/30',
+    cyan: 'hover:border-neon-cyan/30',
+    orange: 'hover:border-neon-orange/30',
+  };
+
+  const neonBadgeHoverClasses: Record<string, string> = {
+    purple: 'hover:border-neon-purple/50 hover:shadow-neon-purple/10',
+    blue: 'hover:border-neon-blue/50 hover:shadow-neon-blue/10',
+    pink: 'hover:border-neon-pink/50 hover:shadow-neon-pink/10',
+    cyan: 'hover:border-neon-cyan/50 hover:shadow-neon-cyan/10',
+    orange: 'hover:border-neon-orange/50 hover:shadow-neon-orange/10',
+  };
 
   return (
     <section id="certificates" className="py-20 bg-black/80 relative overflow-hidden">
@@ -35,8 +50,8 @@ const CertificateSection = () => {
                 key={cert.id}
                 className={cn(
                   'bg-black/40 border border-gray-800 rounded-lg p-6 md:p-8 glassmorphism',
-                  `hover:border-neon-${neonColor}/30 transition-all duration-500`,
-                  'animate-scale-in',
+                  neonCardHoverClasses[neonColor],
+                  'transition-all duration-500 animate-scale-in',
                 )}
                 style={{ animationDelay: `${index * 150}ms` }}
               >
@@ -70,10 +85,19 @@ const CertificateSection = () => {
                           href={cert.credentialUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`ml-3 inline-flex items-center text-neon-${neonColor} hover:underline`}
+                          className={cn(
+                            'ml-3 inline-flex items-center hover:underline',
+                            {
+                              purple: 'text-neon-purple',
+                              blue: 'text-neon-blue',
+                              pink: 'text-neon-pink',
+                              cyan: 'text-neon-cyan',
+                              orange: 'text-neon-orange',
+                            }[neonColor],
+                          )}
                         >
                           {t('certificates.verify', 'Verify')}
-                          <ExternalLink size={14} className="ml-1" />
+                          <ExternalLink size={14} className="rtl:mr-1 ltr:ml-1" />
                         </a>
                       )}
                     </div>
@@ -85,9 +109,8 @@ const CertificateSection = () => {
                         key={i}
                         variant="outline"
                         className={cn(
-                          'bg-black/50 border-gray-700',
-                          `hover:border-neon-${neonColor}/50 hover:shadow-neon-${neonColor}/10`,
-                          'transition-all duration-300 text-gray-300',
+                          'bg-black/50 border-gray-700 text-gray-300 transition-all duration-300',
+                          neonBadgeHoverClasses[neonColor],
                         )}
                       >
                         {skill}

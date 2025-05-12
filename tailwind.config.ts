@@ -21,6 +21,7 @@ export default {
     {
       pattern: /(bg|text|border|ring)-neon-(purple|pink|blue|cyan|orange)/,
     },
+  
     // Explicit hover classes with opacity
     'hover:border-neon-purple/50',
     'hover:border-neon-pink/50',
@@ -33,6 +34,7 @@ export default {
     'hover:shadow-neon-cyan/10',
     'hover:shadow-neon-orange/10',
   ],
+
   prefix: '',
   theme: {
     container: {
