@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
@@ -10,6 +9,7 @@ import ServicesSection from '@/components/ServicesSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import SplashScreen from '@/components/SplashScreen';
+import Certificates from '@/components/CertificatesSection';
 
 const Index = () => {
   const [loading, setLoading] = useState(true);
@@ -23,7 +23,7 @@ const Index = () => {
   useEffect(() => {
     const handleHashLinkClick = (event: MouseEvent) => {
       const target = event.target as HTMLAnchorElement;
-      
+
       if (
         target.tagName === 'A' &&
         target.href &&
@@ -32,19 +32,19 @@ const Index = () => {
       ) {
         const hash = target.href.split('#')[1];
         const element = document.getElementById(hash);
-        
+
         if (element) {
           event.preventDefault();
           window.scrollTo({
             top: element.offsetTop,
-            behavior: 'smooth'
+            behavior: 'smooth',
           });
         }
       }
     };
 
     document.addEventListener('click', handleHashLinkClick);
-    
+
     return () => {
       document.removeEventListener('click', handleHashLinkClick);
     };
@@ -58,7 +58,7 @@ const Index = () => {
   return (
     <>
       {loading && <SplashScreen onFinished={handleSplashFinished} />}
-      
+
       <div className={`min-h-screen bg-black text-white ${loading ? 'hidden' : 'block'}`}>
         <Navbar />
         <main>
@@ -67,6 +67,7 @@ const Index = () => {
           <ExperienceSection />
           <ProjectsSection />
           <SkillsSection />
+          <Certificates />
           <ServicesSection />
           <ContactSection />
         </main>
