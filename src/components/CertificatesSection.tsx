@@ -36,7 +36,7 @@ const CertificateSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 inline-block glow-text">
-            {t('certificates.title', 'Certifications')}
+            {t('navbar.certificates')}
           </h2>
           <div className="w-32 h-1 mx-auto bg-gradient-to-r from-neon-blue to-neon-purple rounded-full"></div>
         </div>

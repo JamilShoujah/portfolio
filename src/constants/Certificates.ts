@@ -1,14 +1,4 @@
-export type Certificate = {
-  id: number;
-  nameKey: string;
-  issuerKey: string;
-  issueDateKey: string;
-  credentialId?: string;
-  credentialUrl?: string;
-  skillKeys: string[];
-};
-
-// import { Certificate } from './types'; // Assuming the Certificate type is exported
+import { Certificate } from '@/models/interfaces';
 
 export const getCertificatesData = (t: (key: string) => string): Certificate[] => [
   {

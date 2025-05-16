@@ -24,46 +24,49 @@ const ExperienceSection = () => {
           <div className="relative pl-0 md:pl-10">
             <div className="hidden md:block absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-neon-purple via-neon-pink to-neon-blue"></div>
 
-            {getExperienceData(t).map((exp, index) => (
-              <div key={exp.id} className="mb-16 last:mb-0">
-                <div className="flex flex-col md:flex-row">
-                  <div className="hidden md:block absolute left-0 transform -translate-x-1/2 w-5 h-5 rounded-full bg-black border-2 border-neon-purple"></div>
+            {getExperienceData(t)
+              .slice()
+              .reverse()
+              .map((exp, index) => (
+                <div key={exp.id} className="mb-16 last:mb-0">
+                  <div className="flex flex-col md:flex-row">
+                    <div className="hidden md:block absolute left-0 transform -translate-x-1/2 w-5 h-5 rounded-full bg-black border-2 border-neon-purple"></div>
 
-                  <div className="w-full bg-black/40 border border-gray-800 rounded-lg p-6 md:p-8 glassmorphism hover:border-neon-purple/30 transition-all duration-300">
-                    <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-6">
-                      <div>
-                        <h3 className={`text-2xl font-bold text-white mb-2`}>
-                          {exp.role}
-                          <span className="ml-2 bg-gradient-to-r from-neon-purple to-neon-pink text-transparent bg-clip-text">
-                            @ {exp.company}
-                          </span>
-                        </h3>
+                    <div className="w-full bg-black/40 border border-gray-800 rounded-lg p-6 md:p-8 glassmorphism hover:border-neon-purple/30 transition-all duration-300">
+                      <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-6">
+                        <div>
+                          <h3 className={`text-2xl font-bold text-white mb-2`}>
+                            {exp.role}
+                            <span className="ml-2 bg-gradient-to-r from-neon-purple to-neon-pink text-transparent bg-clip-text">
+                              @ {exp.company}
+                            </span>
+                          </h3>
 
-                        <div className="flex flex-col sm:flex-row sm:items-center text-gray-400 mb-4 space-y-2 sm:space-y-0 sm:space-x-6">
-                          <div className="flex items-center">
-                            <MapPin size={16} className="mr-1" />
-                            <span>{exp.location}</span>
-                          </div>
-                          <div className="flex items-center">
-                            <CalendarDays size={16} className="mr-1" />
-                            <span>{exp.period}</span>
+                          <div className="flex flex-col sm:flex-row sm:items-center text-gray-400 mb-4 space-y-2 sm:space-y-0 sm:space-x-6">
+                            <div className="flex items-center">
+                              <MapPin size={16} className="mr-1" />
+                              <span>{exp.location}</span>
+                            </div>
+                            <div className="flex items-center">
+                              <CalendarDays size={16} className="mr-1" />
+                              <span>{exp.period}</span>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
 
-                    <ul className="space-y-3">
-                      {exp.description.map((item, i) => (
-                        <li key={i} className="flex items-start">
-                          <span className={`mr-2 text-neon-purple flex-shrink-0 text-xl`}>•</span>
-                          <span className="text-gray-300">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
+                      <ul className="space-y-3">
+                        {exp.description.map((item, i) => (
+                          <li key={i} className="flex items-start">
+                            <span className={`mr-2 text-neon-purple flex-shrink-0 text-xl`}>•</span>
+                            <span className="text-gray-300">{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
         </div>
 

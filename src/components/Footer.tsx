@@ -1,10 +1,9 @@
-import React from 'react';
 import { Github, Linkedin, Mail, Instagram } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
-
+import { FaWhatsapp } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
   const { t, i18n } = useTranslation();
 
   return (
@@ -90,21 +89,7 @@ const Footer = () => {
                   className="text-gray-400 hover:text-neon-cyan transition-colors"
                   aria-label="Twitter"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-x"
-                  >
-                    <path d="M18 6 6 18" />
-                    <path d="m6 6 12 12" />
-                  </svg>
+                  <FaXTwitter size={20} />
                 </a>
               </TooltipTrigger>
               <TooltipContent>
@@ -124,6 +109,23 @@ const Footer = () => {
               </TooltipTrigger>
               <TooltipContent>
                 <p>Email</p>
+              </TooltipContent>
+            </Tooltip>
+
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <a
+                  href="https://wa.link/hm7zdt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-neon-purple transition-colors"
+                  aria-label="GitHub"
+                >
+                  <FaWhatsapp size={20} />
+                </a>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Whatsapp</p>
               </TooltipContent>
             </Tooltip>
           </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -14,16 +14,22 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 20);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
 
   const navLinks = [
     { name: t('navbar.home'), href: '#home' },
@@ -46,7 +52,7 @@ const Navbar = () => {
       >
         <div className="container mx-auto px-4 flex justify-center items-center">
           <div className="w-full max-w-6xl flex justify-between items-center">
-            {/* Logo - Always on the left */}
+            {/* Logo */}
             <Link to="/" className="text-white text-xl font-semibold flex items-center">
               <span className="glow-text text-2xl">JS</span>
             </Link>
@@ -67,71 +73,19 @@ const Navbar = () => {
               </ul>
             </nav>
 
-            {/* Social Icons - Desktop */}
+            {/* Desktop Language Switcher */}
             <div
               className={cn(
                 'hidden md:flex items-center',
                 isRTL ? 'space-x-reverse space-x-4' : 'space-x-4',
               )}
             >
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <a
-                    href="https://github.com/jamilshoujah"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-white transition-colors p-2"
-                    aria-label="GitHub"
-                  >
-                    <Github size={20} />
-                  </a>
-                </TooltipTrigger>
-                <TooltipContent side="bottom">
-                  <p>{t('navbar.github')}</p>
-                </TooltipContent>
-              </Tooltip>
-
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <a
-                    href="https://linkedin.com/in/jamilshoujah"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-white transition-colors p-2"
-                    aria-label="LinkedIn"
-                  >
-                    <Linkedin size={20} />
-                  </a>
-                </TooltipTrigger>
-                <TooltipContent side="bottom">
-                  <p>{t('navbar.linkedin')}</p>
-                </TooltipContent>
-              </Tooltip>
-
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <a
-                    href="mailto:jamilshoujah.dev@gmail.com"
-                    className="text-gray-300 hover:text-white transition-colors p-2"
-                    aria-label="Email"
-                  >
-                    <Mail size={20} />
-                  </a>
-                </TooltipTrigger>
-                <TooltipContent side="bottom">
-                  <p>{t('navbar.email')}</p>
-                </TooltipContent>
-              </Tooltip>
-
-              {/* Language Switcher - Always last in the list */}
               <LanguageSwitcher />
             </div>
 
             {/* Mobile Menu Button */}
             <div className="md:hidden flex items-center">
-              {/* Language Switcher for Mobile */}
               <LanguageSwitcher />
-
               <button
                 className="text-white ml-2"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -145,7 +99,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden fixed inset-0 z-50 bg-black/95 backdrop-blur-lg flex flex-col justify-center items-center">
+          <div className="md:hidden fixed top-0 left-0 w-full h-screen z-[9999] bg-black/95 backdrop-blur-lg flex flex-col justify-center items-center transition-opacity duration-300">
             <button
               onClick={() => setMobileMenuOpen(false)}
               className="absolute top-4 right-4 text-white"
@@ -166,54 +120,6 @@ const Navbar = () => {
                 </a>
               ))}
             </nav>
-
-            <div className="flex items-center space-x-6 mt-8">
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <a
-                    href="https://github.com/jamilshoujah"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-white transition-colors p-2"
-                  >
-                    <Github size={24} />
-                  </a>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{t('navbar.github')}</p>
-                </TooltipContent>
-              </Tooltip>
-
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <a
-                    href="https://linkedin.com/in/jamilshoujah"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-white transition-colors p-2"
-                  >
-                    <Linkedin size={24} />
-                  </a>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{t('navbar.linkedin')}</p>
-                </TooltipContent>
-              </Tooltip>
-
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <a
-                    href="mailto:jamilshoujah.dev@gmail.com"
-                    className="text-gray-300 hover:text-white transition-colors p-2"
-                  >
-                    <Mail size={24} />
-                  </a>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{t('navbar.email')}</p>
-                </TooltipContent>
-              </Tooltip>
-            </div>
           </div>
         )}
       </header>

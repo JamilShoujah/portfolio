@@ -3,16 +3,14 @@ import { ExperienceItem } from '@/models/interfaces';
 export const getExperienceData = (t: (key: string) => string): ExperienceItem[] => [
   {
     id: 1,
-    role: t('experience.roles.talentManager'),
-    company: t('experience.companies.esportWorldCup'),
-    location: t('experience.locations.riyadh'),
-    period: t('experience.periods.julyAug2024'),
+    role: t('experience.roles.iosIntern'),
+    company: t('experience.companies.iquad'),
+    location: t('experience.locations.beirut'),
+    period: t('experience.periods.mayAug2023'),
     description: [
-      t('experience.descriptions.ewc.item1'),
-      t('experience.descriptions.ewc.item2'),
-      t('experience.descriptions.ewc.item3'),
-      t('experience.descriptions.ewc.item4'),
-      t('experience.descriptions.ewc.item5'),
+      t('experience.descriptions.iquad.item1'),
+      t('experience.descriptions.iquad.item2'),
+      t('experience.descriptions.iquad.item3'),
     ],
   },
   {
@@ -35,14 +33,16 @@ export const getExperienceData = (t: (key: string) => string): ExperienceItem[] 
   },
   {
     id: 3,
-    role: t('experience.roles.iosIntern'),
-    company: t('experience.companies.iquad'),
-    location: t('experience.locations.beirut'),
-    period: t('experience.periods.mayAug2023'),
+    role: t('experience.roles.talentManager'),
+    company: t('experience.companies.esportWorldCup'),
+    location: t('experience.locations.riyadh'),
+    period: t('experience.periods.julyAug2024'),
     description: [
-      t('experience.descriptions.iquad.item1'),
-      t('experience.descriptions.iquad.item2'),
-      t('experience.descriptions.iquad.item3'),
+      t('experience.descriptions.ewc.item1'),
+      t('experience.descriptions.ewc.item2'),
+      t('experience.descriptions.ewc.item3'),
+      t('experience.descriptions.ewc.item4'),
+      t('experience.descriptions.ewc.item5'),
     ],
   },
 ];

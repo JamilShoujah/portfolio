@@ -135,57 +135,7 @@ const ContactSection = () => {
               </div>
             </div>
 
-            <div className="pt-4">
-              <h4 className="text-white font-medium mb-4">{t('contact.social')}</h4>
-              <div className="flex space-x-4 rtl:space-x-reverse">
-                <a
-                  href="https://github.com/jamilshoujah"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-black/60 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:border-neon-purple transition-all"
-                >
-                  <Github size={18} />
-                </a>
-                <a
-                  href="https://linkedin.com/in/jamilshoujah"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-black/60 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:border-neon-blue transition-all"
-                >
-                  <Linkedin size={18} />
-                </a>
-                <a
-                  href="https://www.instagram.com/jamilshoujah_/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-black/60 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:border-neon-pink transition-all"
-                >
-                  <Instagram size={18} />
-                </a>
-                <a
-                  href="https://x.com/jamilshoujah_"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-black/60 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:border-neon-cyan transition-all"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-x"
-                  >
-                    <path d="M18 6 6 18" />
-                    <path d="m6 6 12 12" />
-                  </svg>
-                </a>
-              </div>
-            </div>
+            {/* Add automatic single review carousel/ display here please */}
           </div>
 
           {/* Contact Form */}
