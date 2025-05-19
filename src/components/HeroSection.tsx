@@ -34,7 +34,7 @@ const HeroSection = () => {
   return (
     <section
       ref={heroRef}
-      className="hero-gradient h-screen snap-start relative flex items-center justify-center overflow-hidden"
+      className="hero-gradient min-h-screen relative flex items-center justify-center overflow-hidden"
       id="home"
     >
       <div className="absolute inset-0">

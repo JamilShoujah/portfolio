@@ -21,7 +21,7 @@ const SkillsSection = () => {
   const currentCategory = categories.find((cat) => cat.id === activeCategory) || categories[0];
 
   return (
-    <section id="skills" className="py-20 bg-black/90 relative overflow-hidden h-screen snap-start">
+    <section id="skills" className="py-20 bg-black/90 relative overflow-hidden">
       <div className="absolute inset-0 z-0">
         <div
           className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-neon-purple/5 blur-3xl opacity-40 mix-blend-screen parallax"

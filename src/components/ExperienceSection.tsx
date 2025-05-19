@@ -6,10 +6,7 @@ const ExperienceSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section
-      id="experience"
-      className="py-20 bg-black/80 relative overflow-hidden md:h-screen snap-start"
-    >
+    <section id="experience" className="py-20 bg-black/80 relative overflow-hidden">
       <div className="absolute inset-0 z-0">
         <div className="absolute bottom-0 right-0 w-64 h-64 bg-neon-blue/10 rounded-full blur-3xl opacity-40"></div>
         <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-neon-purple/10 rounded-full blur-3xl opacity-30"></div>
@@ -71,27 +68,6 @@ const ExperienceSection = () => {
                 </div>
               ))}
           </div>
-        </div>
-
-        <div className="text-center mt-12">
-          <a
-            href="#projects"
-            className="inline-flex items-center text-lg text-white hover:text-neon-purple transition-colors"
-          >
-            <span>{t('experience.viewProjects')}</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="ml-2 h-5 w-5"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fillRule="evenodd"
-                d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L10 14.586l5.293-5.293a1 1 0 011.414 0z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </a>
         </div>
       </div>
     </section>
