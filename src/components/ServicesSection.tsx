@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { GraduationCap, Server } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -7,7 +6,7 @@ const ServicesSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="services" className="py-20 bg-black relative overflow-hidden">
+    <section id="services" className="py-20 bg-black relative overflow-hidden h-screen snap-start">
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-96 h-96 rounded-full bg-neon-blue/5 blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-neon-purple/5 blur-3xl"></div>
@@ -15,7 +14,9 @@ const ServicesSection = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 inline-block glow-text">{t('services.title')}</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 inline-block glow-text">
+            {t('services.title')}
+          </h2>
           <div className="w-24 h-1 mx-auto bg-gradient-to-r from-neon-blue to-neon-purple rounded-full"></div>
           <p className="text-gray-400 mt-6 max-w-2xl mx-auto">{t('services.subtitle')}</p>
         </div>
@@ -29,12 +30,10 @@ const ServicesSection = () => {
                 </div>
                 <h4 className="text-lg font-bold text-white">{t('services.tutoring.title')}</h4>
               </div>
-              <p className="text-gray-300 mb-4">
-                {t('services.tutoring.description')}
-              </p>
+              <p className="text-gray-300 mb-4">{t('services.tutoring.description')}</p>
               <div className="mt-3">
-                <a 
-                  href="#contact" 
+                <a
+                  href="#contact"
                   className="text-neon-purple hover:text-neon-pink transition-colors"
                 >
                   {t('services.tutoring.cta')} →
@@ -49,12 +48,10 @@ const ServicesSection = () => {
                 </div>
                 <h4 className="text-lg font-bold text-white">{t('services.freelance.title')}</h4>
               </div>
-              <p className="text-gray-300 mb-4">
-                {t('services.freelance.description')}
-              </p>
+              <p className="text-gray-300 mb-4">{t('services.freelance.description')}</p>
               <div className="mt-3">
-                <a 
-                  href="#contact" 
+                <a
+                  href="#contact"
                   className="text-neon-blue hover:text-neon-pink transition-colors"
                 >
                   {t('services.freelance.cta')} →

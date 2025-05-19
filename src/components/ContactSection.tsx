@@ -64,7 +64,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-black relative overflow-hidden">
+    <section id="contact" className="py-20 bg-black relative overflow-hidden h-screen snap-start">
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-neon-blue/5 blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-neon-pink/5 blur-3xl"></div>

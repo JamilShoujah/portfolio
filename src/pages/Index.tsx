@@ -61,7 +61,7 @@ const Index = () => {
 
       <div className={`min-h-screen bg-black text-white ${loading ? 'hidden' : 'block'}`}>
         <Navbar />
-        <main>
+        <main className="snap-y snap-mandatory h-screen overflow-y-scroll scroll-smooth">
           <HeroSection />
           <AboutSection />
           <ExperienceSection />

@@ -15,7 +15,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="py-20 bg-black relative overflow-hidden">
+    <section id="projects" className="py-20 bg-black relative overflow-hidden h-screen snap-start">
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-1/2 w-96 h-96 bg-neon-pink/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-neon-purple/5 rounded-full blur-3xl"></div>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Brain, Rocket, Code, Gamepad } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -7,7 +6,7 @@ const AboutSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="about" className="py-20 bg-black relative overflow-hidden">
+    <section id="about" className="py-20 bg-black relative overflow-hidden h-screen snap-start">
       {/* Background elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-neon-purple/50 to-transparent"></div>
@@ -16,21 +15,17 @@ const AboutSection = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 inline-block glow-text">{t('about.title')}</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 inline-block glow-text">
+            {t('about.title')}
+          </h2>
           <div className="w-24 h-1 mx-auto bg-gradient-to-r from-neon-purple to-neon-pink rounded-full"></div>
         </div>
 
         <div className="max-w-4xl mx-auto">
           <div className="mb-10">
-            <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              {t('about.paragraph1')}
-            </p>
-            <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              {t('about.paragraph2')}
-            </p>
-            <p className="text-gray-300 text-lg leading-relaxed">
-              {t('about.paragraph3')}
-            </p>
+            <p className="text-gray-300 text-lg leading-relaxed mb-6">{t('about.paragraph1')}</p>
+            <p className="text-gray-300 text-lg leading-relaxed mb-6">{t('about.paragraph2')}</p>
+            <p className="text-gray-300 text-lg leading-relaxed">{t('about.paragraph3')}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -41,9 +36,7 @@ const AboutSection = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white">{t('about.devJourney.title')}</h3>
               </div>
-              <p className="text-gray-300">
-                {t('about.devJourney.description')}
-              </p>
+              <p className="text-gray-300">{t('about.devJourney.description')}</p>
             </div>
 
             <div className="bg-black/50 border border-gray-800 rounded-lg p-6 hover:border-neon-pink/50 transition-all duration-300 glassmorphism">
@@ -53,9 +46,7 @@ const AboutSection = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white">{t('about.esports.title')}</h3>
               </div>
-              <p className="text-gray-300">
-                {t('about.esports.description')}
-              </p>
+              <p className="text-gray-300">{t('about.esports.description')}</p>
             </div>
 
             <div className="bg-black/50 border border-gray-800 rounded-lg p-6 hover:border-neon-blue/50 transition-all duration-300 glassmorphism">
@@ -65,9 +56,7 @@ const AboutSection = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white">{t('about.learning.title')}</h3>
               </div>
-              <p className="text-gray-300">
-                {t('about.learning.description')}
-              </p>
+              <p className="text-gray-300">{t('about.learning.description')}</p>
             </div>
 
             <div className="bg-black/50 border border-gray-800 rounded-lg p-6 hover:border-neon-cyan/50 transition-all duration-300 glassmorphism">
@@ -77,9 +66,7 @@ const AboutSection = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white">{t('about.goals.title')}</h3>
               </div>
-              <p className="text-gray-300">
-                {t('about.goals.description')}
-              </p>
+              <p className="text-gray-300">{t('about.goals.description')}</p>
             </div>
           </div>
         </div>

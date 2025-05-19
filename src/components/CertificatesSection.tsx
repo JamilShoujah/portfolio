@@ -27,7 +27,10 @@ const CertificateSection = () => {
   };
 
   return (
-    <section id="certificates" className="py-20 bg-black/80 relative overflow-hidden">
+    <section
+      id="certificates"
+      className="py-20 bg-black/80 relative overflow-hidden h-screen snap-start"
+    >
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-64 h-64 bg-neon-pink/10 rounded-full blur-3xl opacity-40"></div>
         <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-neon-blue/10 rounded-full blur-3xl opacity-30"></div>

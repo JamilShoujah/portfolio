@@ -6,7 +6,10 @@ const ExperienceSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="experience" className="py-20 bg-black/80 relative overflow-hidden">
+    <section
+      id="experience"
+      className="py-20 bg-black/80 relative overflow-hidden md:h-screen snap-start"
+    >
       <div className="absolute inset-0 z-0">
         <div className="absolute bottom-0 right-0 w-64 h-64 bg-neon-blue/10 rounded-full blur-3xl opacity-40"></div>
         <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-neon-purple/10 rounded-full blur-3xl opacity-30"></div>
