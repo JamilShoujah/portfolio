@@ -27,6 +27,7 @@ const ContactSection = () => {
       const serviceId = 'service_tcd3jxv';
       const templateId = 'template_khrl1zf';
       const userId = 'O4V-2HPp83eYOkp-d';
+      const clientTemplate = 'template_e6dznmr';
 
       await emailjs.send(
         serviceId,
@@ -35,6 +36,15 @@ const ContactSection = () => {
           from_name: formData.name,
           reply_to: formData.email,
           message: formData.message,
+        },
+        userId,
+      );
+
+      await emailjs.send(
+        serviceId,
+        clientTemplate,
+        {
+          email: formData.email,
         },
         userId,
       );
