@@ -1,10 +1,10 @@
-import React from 'react';
 import { Github, Linkedin, Mail, Instagram } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
+import { FaWhatsapp } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
   const { t, i18n } = useTranslation();
 
   return (
@@ -19,9 +19,9 @@ const Footer = () => {
       </div>
 
       <div className="container mx-auto px-4 py-12 relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-6 md:mb-0">
-            <div className="flex items-center">
+        <div className="flex flex-col md:flex-row md:justify-between items-center">
+          <div className="mb-6 md:mb-0 text-center md:text-left">
+            <div className="flex items-center justify-center md:justify-start">
               <span className="text-2xl font-bold glow-text">
                 {i18n.language === 'ar' ? 'جميل شجاع' : 'Jamil Shoujah'}
               </span>
@@ -29,7 +29,7 @@ const Footer = () => {
             <p className="text-gray-400 mt-2">{t('hero.role')}</p>
           </div>
 
-          <div className="flex space-x-6 rtl:space-x-reverse">
+          <div className="flex space-x-6 rtl:space-x-reverse justify-center">
             <Tooltip>
               <TooltipTrigger asChild>
                 <a
@@ -90,21 +90,7 @@ const Footer = () => {
                   className="text-gray-400 hover:text-neon-cyan transition-colors"
                   aria-label="Twitter"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-x"
-                  >
-                    <path d="M18 6 6 18" />
-                    <path d="m6 6 12 12" />
-                  </svg>
+                  <FaXTwitter size={20} />
                 </a>
               </TooltipTrigger>
               <TooltipContent>
@@ -124,6 +110,23 @@ const Footer = () => {
               </TooltipTrigger>
               <TooltipContent>
                 <p>Email</p>
+              </TooltipContent>
+            </Tooltip>
+
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <a
+                  href="https://wa.link/hm7zdt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-neon-purple transition-colors"
+                  aria-label="Whatsapp"
+                >
+                  <FaWhatsapp size={20} />
+                </a>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Whatsapp</p>
               </TooltipContent>
             </Tooltip>
           </div>

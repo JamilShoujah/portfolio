@@ -3,6 +3,7 @@
     "home": "Home",
     "about": "About",
     "experience": "Experience",
+    "certificates": "Certificates",
     "projects": "Projects",
     "skills": "Skills",
     "services": "Services",
@@ -208,5 +209,33 @@
   "splash": {
     "loading": "Loading...",
     "welcome": "Welcome!"
+  },
+  "certificates": {
+    "1": {
+      "name": "Foundations of Coding Full-Stack",
+      "issuer": "Microsoft",
+      "issueDate": "April 2025",
+      "skills": ["C# Programming", "Version Control", "FullStack Development", "Logical Thinking"]
+    },
+    "2": {
+      "name": "Introduction to Programming With C#",
+      "issuer": "Microsoft",
+      "issueDate": "April 2025",
+      "skills": ["C# Programming", "Object-Oriented Programming (OOP)", ".NET"]
+    },
+    "3": {
+      "name": "Introduction to Web Development",
+      "issuer": "Microsoft",
+      "issueDate": "April 2025",
+      "skills": ["HTML", "CSS", "Javascript", "Web Development"]
+    },
+    "4": {
+      "name": "Blazor for Front-End Development",
+      "issuer": "Microsoft",
+      "issueDate": "April 2025",
+      "skills": ["Frontend Development", "Blazor", "Data Binding"]
+    },
+    "verify": "Verify Credential",
+    "id": "Credential ID"
   }
 }

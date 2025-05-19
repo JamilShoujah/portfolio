@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { Label } from './ui/label';
 import { Input } from './ui/input';
@@ -10,19 +10,13 @@ import { useTranslation } from 'react-i18next';
 const ContactSection = () => {
   const { t, i18n } = useTranslation();
   const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const isArabic = i18n.language === 'ar';
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -33,6 +27,7 @@ const ContactSection = () => {
       const serviceId = 'service_tcd3jxv';
       const templateId = 'template_khrl1zf';
       const userId = 'O4V-2HPp83eYOkp-d';
+      const clientTemplate = 'template_e6dznmr';
 
       await emailjs.send(
         serviceId,
@@ -41,6 +36,15 @@ const ContactSection = () => {
           from_name: formData.name,
           reply_to: formData.email,
           message: formData.message,
+        },
+        userId,
+      );
+
+      await emailjs.send(
+        serviceId,
+        clientTemplate,
+        {
+          email: formData.email,
         },
         userId,
       );
@@ -64,126 +68,81 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-black relative overflow-hidden">
+    <section
+      id="contact"
+      className="py-16 sm:py-20 bg-black relative overflow-hidden"
+      dir={isArabic ? 'rtl' : 'ltr'}
+    >
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-neon-blue/5 blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-neon-pink/5 blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-64 h-64 sm:w-96 sm:h-96 rounded-full bg-neon-blue/5 blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-56 h-56 sm:w-80 sm:h-80 rounded-full bg-neon-pink/5 blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 inline-block glow-text">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className={`mb-12 sm:mb-16 ${isArabic ? 'text-right' : 'text-center'}`}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 inline-block glow-text">
             {t('contact.title')}
           </h2>
-          <div className="w-24 h-1 mx-auto bg-gradient-to-r from-neon-pink to-neon-blue rounded-full"></div>
+          <div className="w-20 sm:w-24 h-1 mx-auto bg-gradient-to-r from-neon-pink to-neon-blue rounded-full"></div>
         </div>
 
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-12 items-start">
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className={`space-y-6 sm:space-y-8 ${isArabic ? 'text-right' : 'text-left'}`}>
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">{t('contact.contactInfo')}</h3>
-              <p className="text-gray-300 mb-8">{t('contact.freelance')}</p>
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">
+                {t('contact.contactInfo')}
+              </h3>
+              <p className="text-gray-300 text-sm sm:text-base">{t('contact.freelance')}</p>
             </div>
 
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="w-10 h-10 rounded-full bg-neon-purple/20 flex items-center justify-center mr-4">
-                  <Mail className="text-neon-purple" size={18} />
+            <div className="space-y-5 sm:space-y-6">
+              <div className="flex flex-col items-center text-center md:flex-row md:items-start md:text-left">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-neon-purple/20 flex items-center justify-center mb-2 md:mb-0 md:mr-4">
+                  <Mail className="text-neon-purple" size={16} />
                 </div>
                 <div>
-                  <h4 className="text-white font-medium">{t('navbar.email')}</h4>
+                  <h4 className="text-white font-medium text-sm sm:text-base">
+                    {t('navbar.email')}
+                  </h4>
                   <a
                     href="mailto:jamilshoujah.dev@gmail.com"
-                    className="text-gray-400 hover:text-neon-purple transition-colors"
+                    className="text-gray-400 hover:text-neon-purple transition-colors text-sm sm:text-base"
                   >
                     jamilshoujah.dev@gmail.com
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start">
-                <div className="w-10 h-10 rounded-full bg-neon-blue/20 flex items-center justify-center mr-4">
-                  <Phone className="text-neon-blue" size={18} />
+              <div className="flex flex-col items-center text-center md:flex-row md:items-start md:text-left">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-neon-blue/20 flex items-center justify-center mb-2 md:mb-0 md:mr-4">
+                  <Phone className="text-neon-blue" size={16} />
                 </div>
                 <div>
-                  <h4 className="text-white font-medium">{t('contact.phone')}</h4>
+                  <h4 className="text-white font-medium text-sm sm:text-base">
+                    {t('contact.phone')}
+                  </h4>
                   <a
                     href="tel:+96170565932"
-                    className="text-gray-400 hover:text-neon-blue transition-colors ltr"
-                    dir="ltr"
+                    className="text-gray-400 hover:text-neon-blue transition-colors text-sm sm:text-base"
                   >
                     +961 70 565 932
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start">
-                <div className="w-10 h-10 rounded-full bg-neon-pink/20 flex items-center justify-center mr-4">
-                  <MapPin className="text-neon-pink" size={18} />
+              <div className="flex flex-col items-center text-center md:flex-row md:items-start md:text-left">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-neon-pink/20 flex items-center justify-center mb-2 md:mb-0 md:mr-4">
+                  <MapPin className="text-neon-pink" size={16} />
                 </div>
                 <div>
-                  <h4 className="text-white font-medium">{t('contact.location')}</h4>
-                  <p className="text-gray-300">
-                    {i18n.language === 'ar'
-                      ? 'بيروت، لبنان'
-                      : i18n.language === 'fr'
-                      ? 'Beyrouth, Liban'
-                      : 'Beirut, Lebanon'}
+                  <h4 className="text-white font-medium text-sm sm:text-base">
+                    {t('contact.location')}
+                  </h4>
+                  <p className="text-gray-300 text-sm sm:text-base">
+                    {isArabic ? 'بيروت، لبنان' : 'Beirut, Lebanon'}
                   </p>
                 </div>
-              </div>
-            </div>
-
-            <div className="pt-4">
-              <h4 className="text-white font-medium mb-4">{t('contact.social')}</h4>
-              <div className="flex space-x-4 rtl:space-x-reverse">
-                <a
-                  href="https://github.com/jamilshoujah"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-black/60 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:border-neon-purple transition-all"
-                >
-                  <Github size={18} />
-                </a>
-                <a
-                  href="https://linkedin.com/in/jamilshoujah"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-black/60 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:border-neon-blue transition-all"
-                >
-                  <Linkedin size={18} />
-                </a>
-                <a
-                  href="https://www.instagram.com/jamilshoujah_/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-black/60 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:border-neon-pink transition-all"
-                >
-                  <Instagram size={18} />
-                </a>
-                <a
-                  href="https://x.com/jamilshoujah_"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-black/60 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:border-neon-cyan transition-all"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-x"
-                  >
-                    <path d="M18 6 6 18" />
-                    <path d="m6 6 12 12" />
-                  </svg>
-                </a>
               </div>
             </div>
           </div>
@@ -191,13 +150,18 @@ const ContactSection = () => {
           {/* Contact Form */}
           <div
             id="contact-form"
-            className="bg-black/40 border border-gray-800 rounded-lg p-8 glassmorphism"
+            className="bg-black/40 border border-gray-800 rounded-lg p-6 sm:p-8 glassmorphism"
           >
-            <h3 className="text-xl font-bold text-white mb-6">{t('contact.form.title')}</h3>
+            <h3 className="text-lg sm:text-xl font-bold text-white mb-5 sm:mb-6">
+              {t('contact.form.title')}
+            </h3>
 
             <form onSubmit={handleSubmit}>
-              <div className="mb-6">
-                <Label htmlFor="name" className="block text-gray-400 mb-2">
+              <div className="mb-4 sm:mb-6">
+                <Label
+                  htmlFor="name"
+                  className="block text-gray-400 mb-1 sm:mb-2 text-sm sm:text-base"
+                >
                   {t('contact.name')}
                 </Label>
                 <Input
@@ -207,13 +171,16 @@ const ContactSection = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full bg-black/60 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-neon-purple/50"
+                  className="w-full bg-black/60 border border-gray-800 rounded-lg px-3 sm:px-4 py-2.5 sm:py-3 text-white focus:outline-none focus:ring-2 focus:ring-neon-purple/50 text-sm sm:text-base"
                   placeholder={t('contact.name')}
                 />
               </div>
 
-              <div className="mb-6">
-                <Label htmlFor="email" className="block text-gray-400 mb-2">
+              <div className="mb-4 sm:mb-6">
+                <Label
+                  htmlFor="email"
+                  className="block text-gray-400 mb-1 sm:mb-2 text-sm sm:text-base"
+                >
                   {t('contact.email')}
                 </Label>
                 <Input
@@ -223,13 +190,16 @@ const ContactSection = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full bg-black/60 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-neon-purple/50"
+                  className="w-full bg-black/60 border border-gray-800 rounded-lg px-3 sm:px-4 py-2.5 sm:py-3 text-white focus:outline-none focus:ring-2 focus:ring-neon-purple/50 text-sm sm:text-base"
                   placeholder={t('contact.email')}
                 />
               </div>
 
-              <div className="mb-6">
-                <Label htmlFor="message" className="block text-gray-400 mb-2">
+              <div className="mb-4 sm:mb-6">
+                <Label
+                  htmlFor="message"
+                  className="block text-gray-400 mb-1 sm:mb-2 text-sm sm:text-base"
+                >
                   {t('contact.message')}
                 </Label>
                 <Textarea
@@ -238,8 +208,8 @@ const ContactSection = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  rows={5}
-                  className="w-full bg-black/60 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-neon-purple/50 resize-none"
+                  rows={4}
+                  className="w-full bg-black/60 border border-gray-800 rounded-lg px-3 sm:px-4 py-2.5 sm:py-3 text-white focus:outline-none focus:ring-2 focus:ring-neon-purple/50 resize-none text-sm sm:text-base"
                   placeholder={t('contact.message')}
                 />
               </div>
@@ -248,45 +218,17 @@ const ContactSection = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className={`
-                  w-full py-3 px-6 rounded-lg flex items-center justify-center
+                  w-full py-3 rounded-lg flex items-center justify-center
                   ${
                     isSubmitting
-                      ? 'bg-gray-700 cursor-not-allowed'
-                      : 'bg-gradient-to-r from-neon-purple to-neon-pink hover:shadow-lg hover:shadow-neon-purple/20'
+                      ? 'bg-neon-purple/50 cursor-not-allowed'
+                      : 'bg-neon-purple hover:bg-neon-purple/80'
                   }
-                  text-white font-medium transition-all duration-300
+                  text-white font-semibold text-sm sm:text-base transition-colors
                 `}
               >
-                {isSubmitting ? (
-                  <span className="flex items-center">
-                    <svg
-                      className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <circle
-                        className="opacity-25"
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        stroke="currentColor"
-                        strokeWidth="4"
-                      ></circle>
-                      <path
-                        className="opacity-75"
-                        fill="currentColor"
-                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                      ></path>
-                    </svg>
-                    {t('contact.sending')}
-                  </span>
-                ) : (
-                  <span className="flex items-center">
-                    {t('contact.send')}
-                    <Send size={16} className="ml-2" />
-                  </span>
-                )}
+                {t('contact.send')}
+                <Send className="ml-2 rtl:mr-2 rtl:ml-0" size={16} />
               </button>
             </form>
           </div>

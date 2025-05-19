@@ -34,7 +34,6 @@ export interface ExperienceItem {
   location: string;
   period: string;
   description: string[];
-  highlightColor: string;
 }
 
 export interface SplashScreenProps {
@@ -50,5 +49,15 @@ export interface ButtonProps
 export interface State {
   toasts: ToasterToast[];
 }
+
+export type Certificate = {
+  id: number;
+  nameKey: string;
+  issuerKey: string;
+  issueDateKey: string;
+  credentialId?: string;
+  credentialUrl?: string;
+  skillKeys: string[];
+};
 
 export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}

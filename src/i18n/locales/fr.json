@@ -3,6 +3,7 @@
     "home": "Accueil",
     "about": "À propos",
     "experience": "Expérience",
+    "certificates": "Certificats",
     "projects": "Projets",
     "skills": "Compétences",
     "services": "Services",
@@ -208,5 +209,38 @@
   "splash": {
     "loading": "Chargement...",
     "welcome": "Bienvenue !"
+  },
+  "certificates": {
+    "1": {
+      "name": "Fondations du Développement Full-Stack",
+      "issuer": "Microsoft",
+      "issueDate": "Avril 2025",
+      "skills": [
+        "Programmation C#",
+        "Contrôle de version",
+        "Développement Full-Stack",
+        "Pensée logique"
+      ]
+    },
+    "2": {
+      "name": "Introduction à la Programmation avec C#",
+      "issuer": "Microsoft",
+      "issueDate": "Avril 2025",
+      "skills": ["Programmation C#", "Programmation orientée objet (POO)", ".NET"]
+    },
+    "3": {
+      "name": "Introduction au Développement Web",
+      "issuer": "Microsoft",
+      "issueDate": "Avril 2025",
+      "skills": ["HTML", "CSS", "Javascript", "Développement Web"]
+    },
+    "4": {
+      "name": "Blazor pour le Développement Front-End",
+      "issuer": "Microsoft",
+      "issueDate": "Avril 2025",
+      "skills": ["Développement Front-End", "Blazor", "Liaison de données"]
+    },
+    "verify": "Vérifier le certificat",
+    "id": "ID du certificat"
   }
 }
