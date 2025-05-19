@@ -22,6 +22,7 @@ const ExperienceSection = () => {
 
         <div className="max-w-4xl mx-auto">
           <div className="relative pl-0 md:pl-10">
+            {/* timeline section */}
             <div className="hidden md:block absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-neon-purple via-neon-pink to-neon-blue"></div>
 
             {getExperienceData(t)
@@ -30,7 +31,8 @@ const ExperienceSection = () => {
               .map((exp, index) => (
                 <div key={exp.id} className="mb-16 last:mb-0">
                   <div className="flex flex-col md:flex-row">
-                    <div className="hidden md:block absolute left-0 transform -translate-x-1/2 w-5 h-5 rounded-full bg-black border-2 border-neon-purple"></div>
+                    {/* dots on timeline */}
+                    <div className="hidden md:block absolute left-[1px] transform -translate-x-1/2 box-border w-5 h-5 rounded-full bg-black border-2 border-neon-purple" />
 
                     <div className="w-full bg-black/40 border border-gray-800 rounded-lg p-6 md:p-8 glassmorphism hover:border-neon-purple/30 transition-all duration-300">
                       <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-6">
